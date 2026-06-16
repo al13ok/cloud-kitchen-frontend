@@ -1,0 +1,15 @@
+# Third-party files
+**/chatbot-new.bundle.js
+**/public/chatbot-new.bundle.js
+**/src/app/(full-width-pages)/(auth)/demo/chatbot-new.bundle.js
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env* 

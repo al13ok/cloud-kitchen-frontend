@@ -1,0 +1,17 @@
+stages:
+  - release_notes
+  - validate
+  - build
+  - test
+  - deploy
+  - notify
+  # - release_notes   # merged in from releaseNote.yml
+
+include:
+  - project: "root/central-commitops"
+    ref: "main"
+    file: "/.gitlab/common-pipeline.yml"
+    #orange
+  - project: "root/central-commitops"
+    ref: "release_note"
+    file: "/releaseNote.yml"

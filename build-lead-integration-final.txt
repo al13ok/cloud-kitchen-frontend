@@ -1,0 +1,9 @@
+
+> arbic-cexarbitragebot-25024248-nextjs@0.1.0 build
+> env-cmd -f .env.prod next build
+
+   ▲ Next.js 15.2.3
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+Terminate batch job (Y/N)? Terminate batch job (Y/N)? ^C

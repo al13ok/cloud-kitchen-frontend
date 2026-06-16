@@ -1,0 +1,150 @@
+{
+    "name": "arbic-cexarbitragebot-25024248-nextjs",
+    "version": "0.1.0",
+    "private": true,
+    "engines": {
+        "node": ">=20 <21"
+    },
+    "scripts": {
+        "dev": "node scripts/dev-with-port.js",
+        "dev:light": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" WATCHPACK_POLLING=true node scripts/dev-with-port.js",
+        "dev:basic": "node scripts/dev-with-port.js",
+        "dev:helper": "node scripts/lowfs.js",
+        "fix:css": "node scripts/fix-css.js",
+        "stage": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" env-cmd -f .env.stage next build",
+        "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" env-cmd -f .env.prod next build",
+        "analyze": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" ANALYZE=true env-cmd -f .env.prod next build",
+        "start": "node scripts/start-with-port.js",
+        "start:stage": "cross-env ENV_FILE=.env.stage node scripts/start-with-port.js",
+        "start:prod": "cross-env ENV_FILE=.env.prod node scripts/start-with-port.js",
+        "lint": "next lint",
+        "typecheck": "tsc --noEmit",
+        "validate:env": "bash scripts/validate-env.sh",
+        "test:performance": "node scripts/performance-test.js"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.1",
+        "@fullcalendar/core": "^6.1.15",
+        "@fullcalendar/daygrid": "^6.1.15",
+        "@fullcalendar/interaction": "^6.1.15",
+        "@fullcalendar/list": "^6.1.15",
+        "@fullcalendar/react": "^6.1.15",
+        "@fullcalendar/timegrid": "^6.1.15",
+        "@heroicons/react": "^2.2.0",
+        "@hookform/resolvers": "^5.1.1",
+        "@mui/icons-material": "^7.3.4",
+        "@mui/lab": "^7.0.1-beta.18",
+        "@mui/material": "^7.3.4",
+        "@mui/x-charts": "^8.14.0",
+        "@mui/x-data-grid": "^8.14.0",
+        "@mui/x-date-pickers": "^8.14.0",
+        "@radix-ui/react-select": "^2.2.5",
+        "@react-jvectormap/core": "^1.0.4",
+        "@react-jvectormap/world": "^1.1.2",
+        "@react-spring/web": "^10.0.3",
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/postcss": "^4.0.10",
+        "@types/react-datepicker": "^6.2.0",
+        "@visx/gradient": "^3.12.0",
+        "@visx/group": "^3.12.0",
+        "@visx/mock-data": "^3.12.0",
+        "@visx/scale": "^3.12.0",
+        "@visx/shape": "^3.12.0",
+        "apexcharts": "^4.3.0",
+        "autoprefixer": "^10.4.16",
+        "aws-sdk": "^2.1692.0",
+        "axios": "^1.10.0",
+        "clsx": "^2.1.1",
+        "country-state-city": "^3.2.1",
+        "critters": "^0.0.23",
+        "date-fns": "^4.1.0",
+        "dotenv": "^17.2.1",
+        "flatpickr": "^4.6.13",
+        "framer-motion": "^12.23.3",
+        "jspdf": "^3.0.1",
+        "jspdf-autotable": "^5.0.2",
+        "libphonenumber-js": "^1.12.10",
+        "lucide-react": "^0.511.0",
+        "next": "^15.2.3",
+        "postcss": "^8.4.38",
+        "react": "^19.1.0",
+        "react-apexcharts": "^1.7.0",
+        "react-date-range": "^2.0.1",
+        "react-datepicker": "^8.4.0",
+        "react-dnd": "^16.0.1",
+        "react-dnd-html5-backend": "^16.0.1",
+        "react-dom": "^19.1.0",
+        "react-dropzone": "^14.3.5",
+        "react-gauge-chart": "^0.5.1",
+        "react-hook-form": "^7.60.0",
+        "react-hot-toast": "^2.5.2",
+        "react-icons": "^5.5.0",
+        "react-phone-input-2": "^2.15.1",
+        "react-phone-number-input": "^3.4.12",
+        "react-select": "^5.10.2",
+        "react-toastify": "^11.0.5",
+        "recharts": "^3.3.0",
+        "sass": "^1.89.2",
+        "sweetalert2": "^11.22.2",
+        "swiper": "^11.2.0",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss": "^4.0.3",
+        "xlsx": "^0.18.5",
+        "yup": "^1.7.1",
+        "zod": "^4.0.5",
+        "zxcvbn": "^4.4.2"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@svgr/webpack": "^8.1.0",
+        "@types/aws-sdk": "^0.0.42",
+        "@types/node": "^20",
+        "@types/react": "^19.1.8",
+        "@types/react-dom": "^19.1.6",
+        "@types/react-icons": "^2.2.7",
+        "@types/react-select": "^5.0.0",
+        "@types/react-transition-group": "^4.4.12",
+        "cross-env": "^7.0.3",
+        "env-cmd": "^10.1.0",
+        "eslint": "^9",
+        "eslint-config-next": "15.1.3",
+        "typescript": "^5"
+    },
+    "overrides": {
+        "@react-jvectormap/core": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@react-jvectormap/world": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@visx/gradient": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@visx/group": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@visx/mock-data": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@visx/scale": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "@visx/shape": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "react-gauge-chart": {
+            "react": "^16.8.0 || ^17 || ^18 || ^19",
+            "react-dom": "^16.8.0 || ^17 || ^18 || ^19"
+        },
+        "sharp": "^0.33.5"
+    },
+    "note": "Set NEXT_PUBLIC_API_URL in .env.local for API integration (e.g., https://py-mobiloitte.converiqo.ai)"
+}

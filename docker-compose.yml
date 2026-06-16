@@ -1,0 +1,6 @@
+services:
+  mobiloitte-aiagent-nextjs:
+    build: .
+    container_name: aiagent-web
+    restart: always
+    network_mode: host

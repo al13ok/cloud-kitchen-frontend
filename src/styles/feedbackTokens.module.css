@@ -1,0 +1,60 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.875rem;
+  background: rgba(59, 130, 246, 0.12);
+  color: rgb(30, 64, 175);
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.pill button {
+  background: transparent;
+  color: inherit;
+  border: none;
+  font-size: 0.75rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background: none;
+  overflow: hidden;
+}
+
+.panel {
+  width: min(100%, var(--feedback-max-width));
+  max-height: calc(100vh - var(--survey-header-height, 60px) - var(--survey-footer-height, 40px) - 1rem);
+  background: white;
+  border-radius: var(--feedback-radius-lg);
+  box-shadow: var(--feedback-shadow);
+  padding: clamp(1rem, 2vw, 1.25rem);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    padding: var(--feedback-gutter-tablet);
+    padding-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    padding: var(--feedback-gutter-desktop);
+    padding-top: 2rem;
+  }
+}
+
