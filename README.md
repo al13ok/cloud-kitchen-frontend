@@ -1,9 +1,6 @@
-# Converiqo - Frontend Application Documentation
+# Cloud Kitchen - Frontend Application Documentation
 
-## 📖 Project Overview
-Converiqo is a modern, AI-powered business management dashboard built with **Next.js 15**, **TypeScript**, and **React 19**. This repository contains the complete **Source Code** for the web interface, handling all user interactions, visual presentation, and client-side logic.
 
-This document details the detailed structure of the frontend codebase.
 
 ---
 
